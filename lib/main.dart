@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:jobsque/screens/JobDetails/job_details_cubit.dart';
-import 'package:jobsque/screens/Signin/Cubit/sign_in_cubit.dart';
-import 'package:jobsque/screens/forgotpassword/newpassword/new_pass_word_cubit.dart';
-import 'package:jobsque/screens/onbording/Cubit/onbording_cubit.dart';
-import 'package:jobsque/screens/onbording/SplashScreen.dart';
+import 'package:joobfinder/screens/JobDetails/job_details_cubit.dart';
+import 'package:joobfinder/screens/Signin/Cubit/sign_in_cubit.dart';
+import 'package:joobfinder/screens/forgotpassword/newpassword/new_pass_word_cubit.dart';
+import 'package:joobfinder/screens/onbording/Cubit/onbording_cubit.dart';
+import 'package:joobfinder/screens/onbording/SplashScreen.dart';
 import 'CustomItems/Custom_Card/custom_card_cubit.dart';
 import 'Services/sharedprefeances.dart';
 import 'controller/data_cubit.dart';
