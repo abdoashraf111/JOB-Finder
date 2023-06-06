@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:joobfinder/screens/HomeScreen/HomeNavigationBar.dart';
 
 class AppliedScreen extends StatefulWidget {
   AppliedScreen({Key? key}) : super(key: key);
@@ -19,17 +20,18 @@ class _AppliedScreenState extends State<AppliedScreen> {
             padding: const EdgeInsets.only(right: 24, left: 24),
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              const SizedBox(
+                  const SizedBox(
                 height: 24,
-              ),
-              Row(
+                 ),
+                    Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   IconButton(
                     icon: const Icon(Icons.arrow_back_outlined, size: 24),
                     color: Colors.black,
                     onPressed: () {
-                      Navigator.of(context).pop();
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeNavigationBar(pageNumber: 0),));
+
                     },
                   ),
                   const Spacer(
@@ -44,10 +46,10 @@ class _AppliedScreenState extends State<AppliedScreen> {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 50,
-              ),
-              CupertinoSlidingSegmentedControl(
+                    const SizedBox(
+                     height: 50,
+                     ),
+                   CupertinoSlidingSegmentedControl(
                   backgroundColor: const Color(0xffF4F4F5),
                   thumbColor: const Color(0xff091A7A),
                   padding: const EdgeInsets.all(4),
@@ -84,7 +86,7 @@ class _AppliedScreenState extends State<AppliedScreen> {
                       _controller.jumpToPage(1);
                     }
                   }),
-              SizedBox(
+                   SizedBox(
                 height: 500,
                 width: MediaQuery.of(context).size.width,
                 child: PageView(
@@ -96,25 +98,43 @@ class _AppliedScreenState extends State<AppliedScreen> {
                   },
                   children: [
                     Column(mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset("lib/images/no applyed.png"),
+                          const Text("No applications were applied",style: TextStyle(fontSize: 24,fontWeight: FontWeight.w500)),
+                          const SizedBox(height: 20,),
+                          const SizedBox(
+                            width: 324,
+                            child: Column(
+                              children: [
+                                Text("there are not applied applications",
+                                  style:TextStyle(fontSize: 16,color: Colors.grey) ,),
+
+                              ],
+                            ),
+
+                          )
+                        ]),
+                    Column(mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                       Image.asset("lib/images/no applyed.png"),
-                      Text("No applications were rejected",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500)),
+                      Text("No applications were rejected",style: TextStyle(fontSize: 24,fontWeight: FontWeight.w500)),
                       SizedBox(height: 20,),
                           SizedBox(
                               width: 324,
-                              child: Text("If there is an application that is rejected by the company it will appear here",
-                                style:TextStyle(fontSize: 16) ,))
+                              child: Column(
+                                children: [
+                                  Text("If there is an application that is rejected by ",
+                                    style:TextStyle(fontSize: 16,color: Colors.grey) ,),
+                                  Text("the company it will appear here",
+                                    style:TextStyle(fontSize: 16,color: Colors.grey) ,),
+                                ],
+                              ),
+
+                          )
                     ]),
-                    Center(
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                        Image.asset("lib/images/no applyed.png",
-                            color: Colors.black),
-                        Text("No applications were rejected"),
-                        Text("No applications were rejected")
-                      ]),
-                    ),
+
                   ],
                 ),
               )
