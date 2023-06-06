@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../CustomItems/custom_icons.dart';
 import '../../controller/data_cubit.dart';
-import '../JobDetails/job_Details.dart';
+import '../job_Details.dart';
 import 'HomeNavigationBar.dart';
 
 class SearchScreen extends StatefulWidget {

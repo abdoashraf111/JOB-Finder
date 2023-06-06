@@ -4,7 +4,7 @@ import '../../../CustomItems/Custom_job.dart';
 import '../../CustomItems/Custom_Credit.dart';
 import '../../CustomItems/custom_icons.dart';
 import '../../controller/data_cubit.dart';
-import '../JobDetails/job_Details.dart';
+import '../job_Details.dart';
 import 'SearchScreen.dart';
 
 class HomeScreen extends StatelessWidget {

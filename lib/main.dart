@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:joobfinder/screens/JobDetails/job_details_cubit.dart';
 import 'package:joobfinder/screens/Signin/Cubit/sign_in_cubit.dart';
 import 'package:joobfinder/screens/forgotpassword/newpassword/new_pass_word_cubit.dart';
 import 'package:joobfinder/screens/onbording/Cubit/onbording_cubit.dart';
@@ -31,12 +30,11 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (context) =>SignInCubit() ,),
           BlocProvider(create: (context) =>OnbordingCubit() ,),
           BlocProvider(create:(context) => NewPassWordCubit(),),
-          BlocProvider(create: (context) => JobDetailsCubit(),),
           BlocProvider(create:(context) => CustomCardCubit(),),
           BlocProvider(create: (context) => DataCubit()..showFavorites(),),
 
         ],
-        child:MaterialApp(
+        child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home:
         // SlidingPage(),

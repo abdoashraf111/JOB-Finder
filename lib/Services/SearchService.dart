@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../CustomItems/Custom_job.dart';
 import '../CustomItems/custom_icons.dart';
 import '../controller/data_cubit.dart';
-import '../screens/JobDetails/job_Details.dart';
+import '../screens/job_Details.dart';
 
 class search extends SearchDelegate{
   

@@ -107,7 +107,7 @@ class _LanguageState extends State<Language> {
                                         }
                                     });
 
-                                },icon:press[index]==true?Icon(Icons.circle):Icon(Icons.circle_outlined))
+                                },icon:press[index]==true?const Icon(Icons.circle,color: Colors.blue,):Icon(Icons.circle_outlined))
                               ],
                             ),
                             separatorBuilder:  (context, index) => const Divider(height: 20,color: Colors.grey,),

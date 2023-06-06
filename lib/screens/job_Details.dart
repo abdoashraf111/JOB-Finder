@@ -1,13 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../CustomItems/CustomWorker.dart';
-import '../../CustomItems/CustomButton.dart';
-import '../../CustomItems/custom_icons.dart';
-import '../../controller/data_cubit.dart';
-import '../ApplyJob.dart';
-import '../HomeScreen/HomeScreen.dart';
-import 'job_details_cubit.dart';
+import '../../CustomItems/CustomWorker.dart';
+import '../CustomItems/CustomButton.dart';
+import '../CustomItems/custom_icons.dart';
+import '../controller/data_cubit.dart';
+import 'ApplyJob.dart';
+import 'HomeScreen/HomeScreen.dart';
 
 class JobDetails extends StatelessWidget {
   JobDetails({Key? key, required this.index}) : super(key: key);
