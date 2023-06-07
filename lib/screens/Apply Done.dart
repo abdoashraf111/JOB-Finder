@@ -28,7 +28,7 @@ class ApplyDone extends StatelessWidget {
                       Navigator.of(context).pop();
                     },
                   ),
-                  Text("Apply Job"),
+                  const Text("Apply Job"),
                 ],
               ),
               const Spacer(

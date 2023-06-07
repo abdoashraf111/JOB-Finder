@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../CustomItems/Custom_Card/Custom_Card.dart';
@@ -6,7 +7,7 @@ import '../../CustomItems/CustomButton.dart';
 import 'CreateDone.dart';
 
 class CreateAccount2 extends StatefulWidget {
-  CreateAccount2({Key? key}) : super(key: key);
+  const CreateAccount2({Key? key}) : super(key: key);
 
   @override
   State<CreateAccount2> createState() => _CreateAccount2State();
@@ -174,7 +175,7 @@ class _CreateAccount2State extends State<CreateAccount2> {
                   fun: () {
                     if (numpage == 1) {
                       Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) =>CreateDone() ,));
+                          MaterialPageRoute(builder: (context) =>const CreateDone() ,));
                     } else {
                       _controller.nextPage(
                           duration: const Duration(seconds: 1), curve: Curves.linear);

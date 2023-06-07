@@ -22,7 +22,7 @@ class _CreateAccountState extends State<CreateAccount> {
   TextEditingController emailcontroller = TextEditingController();
   TextEditingController passwordcontroller = TextEditingController();
   bool clickEnable = false;
-  GlobalKey<FormState> FormKey = GlobalKey<FormState>();
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   int passWrong = 2;
   bool passActive = false;
@@ -35,7 +35,7 @@ class _CreateAccountState extends State<CreateAccount> {
           padding: const EdgeInsets.only(left: 24, right: 24),
           child: SingleChildScrollView(
             child: Form(
-              key: FormKey,
+              key: formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -49,7 +49,7 @@ class _CreateAccountState extends State<CreateAccount> {
                             Navigator.of(context).push(
                                 MaterialPageRoute(builder: (context) =>SlidingPage() ,));
                           },
-                          icon: Icon(Icons.arrow_back, color: Colors.black)),
+                          icon: const Icon(Icons.arrow_back, color: Colors.black)),
                       const Spacer(
                         flex: 1,
                       ),
@@ -61,7 +61,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   const SizedBox(
                     height: 40,
                   ),
-                  const Text("Cereate Account",
+                  const Text("Create Account",
                       style: TextStyle(fontSize: 28, color: Colors.black)),
                   const SizedBox(
                     height: 8,
@@ -77,7 +77,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   TextFormField(
                     onChanged: (value) {
                       setState(() {
-                        if (FormKey.currentState!.validate()) {
+                        if (formKey.currentState!.validate()) {
                           setState(() {
                             clickEnable = true;
                           });
@@ -96,7 +96,7 @@ class _CreateAccountState extends State<CreateAccount> {
                     controller: namecontroller,
                     keyboardType: TextInputType.name,
                     decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.person_outline),
+                        prefixIcon: const Icon(Icons.person_outline),
                         hintText: "Username",
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(8),
@@ -108,7 +108,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   TextFormField(
                     onChanged: (value) {
                       setState(() {
-                        if (FormKey.currentState!.validate()) {
+                        if (formKey.currentState!.validate()) {
                           clickEnable = true;
                         } else {
                           clickEnable = false;
@@ -125,7 +125,7 @@ class _CreateAccountState extends State<CreateAccount> {
                     controller: emailcontroller,
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.email_outlined),
+                        prefixIcon: const Icon(Icons.email_outlined),
                         hintText: "Email",
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(8),
@@ -137,7 +137,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   TextFormField(
                     onChanged: (value) {
                       setState(() {
-                        if (FormKey.currentState!.validate()) {
+                        if (formKey.currentState!.validate()) {
                           clickEnable = true;
                         } else {
                           clickEnable = false;
@@ -181,7 +181,7 @@ class _CreateAccountState extends State<CreateAccount> {
                     obscureText: !_sufvar,
                     decoration: InputDecoration(
                         hintText: "Password",
-                        prefixIcon: Icon(Icons.lock_outline),
+                        prefixIcon: const Icon(Icons.lock_outline),
                         suffixIcon: GestureDetector(
                             onTap: () {
                               setState(() {
@@ -233,7 +233,7 @@ class _CreateAccountState extends State<CreateAccount> {
                     child: CustomButton(
                       text: "Create account",
                       fun: () async {
-                        if (FormKey.currentState!.validate()) {
+                        if (formKey.currentState!.validate()) {
                           MyCache.SetString(
                               key: MyChachKey.password,
                               value: passwordcontroller.text);
@@ -248,17 +248,15 @@ class _CreateAccountState extends State<CreateAccount> {
                               password: passwordcontroller.text,);
                          var data=BlocProvider.of<DataCubit>(context).modelRegister.status;
                           if (data == false) {
-                            print(data);
                             ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content:Text("The email has already been taken") ));
+                                const SnackBar(content:Text("The email has already been taken") ));
                           } else if (data == true) {
                             ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content:Text("The email has already been taken") ));
-                            print("done ssssssssssss");
+                                const SnackBar(content:Text("The email has already been taken") ));
                             Navigator.of(context).push(
-                                MaterialPageRoute(builder: (context) =>CreateAccount2() ,));
+                                MaterialPageRoute(builder: (context) =>const CreateAccount2() ,));
                           } else {
-                            print("wronggggggggggg");
+
                           }
                         }
                       },
@@ -273,8 +271,8 @@ class _CreateAccountState extends State<CreateAccount> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Row(
-                    children: const [
+                  const Row(
+                    children: [
                       Expanded(
                         child: Divider(
                           height: 10,
@@ -310,12 +308,12 @@ class _CreateAccountState extends State<CreateAccount> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               border: Border.all(
-                                  color: Color.fromRGBO(209, 213, 219, 1))),
+                                  color: const Color.fromRGBO(209, 213, 219, 1))),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Image.asset("lib/images/google.png"),
-                              Text(
+                              const Text(
                                 "Google",
                                 style: TextStyle(
                                   fontSize: 14,
@@ -325,7 +323,7 @@ class _CreateAccountState extends State<CreateAccount> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 19,
                       ),
                       InkWell(
@@ -336,12 +334,12 @@ class _CreateAccountState extends State<CreateAccount> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               border: Border.all(
-                                  color: Color.fromRGBO(209, 213, 219, 1))),
+                                  color: const Color.fromRGBO(209, 213, 219, 1))),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Image.asset("lib/images/Facebook.png"),
-                              Text(
+                              const Text(
                                 "Facebook",
                                 style: TextStyle(
                                   fontSize: 14,

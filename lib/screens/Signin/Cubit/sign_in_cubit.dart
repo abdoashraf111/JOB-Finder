@@ -25,7 +25,7 @@ class SignInCubit extends Cubit<SignInState> {
         key: MyChachKey.checked,
         value: checkBox);
     emit(SignInCheckBox());
-    print("true");
+
   }
 
   checkBoxFalse(){
@@ -34,7 +34,7 @@ class SignInCubit extends Cubit<SignInState> {
         key: MyChachKey.checked,
         value: checkBox);
     emit(SignInCheckBox());
-    print("false");
+
   }
 
   showPassFun(){

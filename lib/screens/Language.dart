@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Language extends StatefulWidget {
-   Language({Key? key}) : super(key: key);
+   const Language({Key? key}) : super(key: key);
 
   @override
   State<Language> createState() => _LanguageState();
@@ -82,17 +81,17 @@ class _LanguageState extends State<Language> {
 
                         ],
                       ),
-                      SizedBox(height: 50,),
+                      const SizedBox(height: 50,),
                       SizedBox(
                         height: 650,
                         child: ListView.separated(
-                          physics: NeverScrollableScrollPhysics(),
+                          physics: const NeverScrollableScrollPhysics(),
                             itemBuilder: (context, index) => Row(
                               children: [
                                 Image.asset(image[index]),
-                                Spacer(),
+                                const Spacer(),
                                 Text(text[index]),
-                                Spacer(),
+                                const Spacer(),
                                 IconButton(onPressed: (){
                                     setState(() {
                                       for(int i=0 ;i<10;i++)
@@ -107,7 +106,7 @@ class _LanguageState extends State<Language> {
                                         }
                                     });
 
-                                },icon:press[index]==true?const Icon(Icons.circle,color: Colors.blue,):Icon(Icons.circle_outlined))
+                                },icon:press[index]==true?const Icon(Icons.circle,color: Colors.blue,):const Icon(Icons.circle_outlined))
                               ],
                             ),
                             separatorBuilder:  (context, index) => const Divider(height: 20,color: Colors.grey,),

@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../CustomItems/CustomButton.dart';
-import '../HomeScreen/HomeNavigationBar.dart';
 import '../Signin/Signin.dart';
 import 'CreatAcount2.dart';
 
@@ -30,7 +28,7 @@ class CreateDone extends StatelessWidget {
                     color: Colors.black,
                     onPressed: () {
                       Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) =>CreateAccount2() ,));
+                          MaterialPageRoute(builder: (context) =>const CreateAccount2() ,));
                     },
                   ),
                 ],
@@ -60,7 +58,7 @@ class CreateDone extends StatelessWidget {
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) =>SignIn() ,));
                   },
-                  buttoncolor: Color(0xff3366FF),
+                  buttoncolor: const Color(0xff3366FF),
                   textcolor: Colors.white),
               const SizedBox(
                 height: 40,

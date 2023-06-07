@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../CustomItems/custom_icons.dart';
 import '../EditeProfile.dart';
 import '../Language.dart';
@@ -23,14 +22,14 @@ class ProfileScreen extends StatelessWidget {
                   Container(
                     height: 195,
                     width: MediaQuery.of(context).size.width,
-                    color: Color(0xffD6E4FF),
+                    color: const Color(0xffD6E4FF),
                   ),
                   const SizedBox(height: 52,),
                   const Text("Rafif Dian Axelingga"),
                   const Text("Senior UI/UX Designer"),
                   Container(
                     margin: const EdgeInsets.all(24),
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     height:68 ,
                     width: 327,
                     decoration: const BoxDecoration(
@@ -94,7 +93,7 @@ class ProfileScreen extends StatelessWidget {
                             width: MediaQuery.of(context).size.width,
                             decoration: BoxDecoration(
                               color: Colors.white,
-                                borderRadius: BorderRadius.only(topLeft: Radius.circular(50),topRight: Radius.circular(50)),
+                                borderRadius: const BorderRadius.only(topLeft: Radius.circular(50),topRight: Radius.circular(50)),
                                 border: Border.all(color: Colors.grey)
                         ),
                             child:Center(
@@ -102,7 +101,7 @@ class ProfileScreen extends StatelessWidget {
                                 padding: const EdgeInsets.only(right: 24,left: 24),
                                 child:  TextFormField(
                                   onFieldSubmitted: (value) => Navigator.pop(context),
-                                  strutStyle: StrutStyle(height: 5,),
+                                  strutStyle: const StrutStyle(height: 5,),
                                   validator: (value) {
                                     if (value!.length < 5) {
                                       return "it should more than 5 letters or numbers ";
@@ -135,7 +134,7 @@ class ProfileScreen extends StatelessWidget {
                   Container(
                     width: MediaQuery.of(context).size.width,
                     height: 36,
-                    color: Color(0xffE5E7EB),
+                    color: const Color(0xffE5E7EB),
                     child:const Padding(
                       padding: EdgeInsets.only(right:24 ,left: 24,),
                       child: Row(mainAxisAlignment: MainAxisAlignment.start,
@@ -172,18 +171,18 @@ class ProfileScreen extends StatelessWidget {
                          ),
                          Row(
                            children: [
-                             CircleAvatar(
+                             const CircleAvatar(
                                backgroundColor: Color(0xffD6E4FF),
                                radius: 25,
                                child:Icon(CustomIcons.folder_favorite) ,
                              ),
-                             SizedBox(width: 12,),
-                             Text("Portfolio"),
-                             Spacer(),
+                             const SizedBox(width: 12,),
+                             const Text("Portfolio"),
+                             const Spacer(),
                              IconButton(onPressed: (){
                                Navigator.of(context).push(MaterialPageRoute(
-                                   builder: (context) => Portfolio()));
-                             }, icon: Icon(Icons.arrow_forward))
+                                   builder: (context) => const Portfolio()));
+                             }, icon: const Icon(Icons.arrow_forward))
                            ],
                          ),
                          const Padding(
@@ -192,38 +191,38 @@ class ProfileScreen extends StatelessWidget {
                          ),
                          Row(
                            children: [
-                             CircleAvatar(
+                             const CircleAvatar(
                                backgroundColor: Color(0xffD6E4FF),
                                radius: 25,
                                child:Icon(CustomIcons.global) ,
                              ),
-                             SizedBox(width: 12,),
-                             Text("Langauge"),
-                             Spacer(),
+                             const SizedBox(width: 12,),
+                             const Text("Langauge"),
+                             const Spacer(),
                              IconButton(onPressed: (){
                                Navigator.of(context).push(MaterialPageRoute(
                                    builder: (context) => Language()));
-                             }, icon: Icon(Icons.arrow_forward))
+                             }, icon: const Icon(Icons.arrow_forward))
                            ],
                          ),
-                          Padding(
+                          const Padding(
                            padding: EdgeInsets.only(top: 14,bottom: 14),
                            child: Divider(height: 10,color: Colors.grey,thickness: 1,indent: 0),
                          ),
                          Row(
                            children: [
-                             CircleAvatar(
+                             const CircleAvatar(
                                backgroundColor: Color(0xffD6E4FF),
                                radius: 25,
                                child:Icon(CustomIcons.notification_1) ,
                              ),
-                             SizedBox(width: 12,),
-                             Text("Notification"),
-                             Spacer(),
+                             const SizedBox(width: 12,),
+                             const Text("Notification"),
+                             const Spacer(),
                              IconButton(onPressed: (){
                                Navigator.of(context).push(MaterialPageRoute(
                                    builder: (context) => NotificationScreen()));
-                             }, icon: Icon(Icons.arrow_forward))
+                             }, icon: const Icon(Icons.arrow_forward))
                            ],
                          ),
                          const Padding(
@@ -259,7 +258,7 @@ class ProfileScreen extends StatelessWidget {
                   Container(
                     width: MediaQuery.of(context).size.width,
                     height: 36,
-                    color: Color(0xffE5E7EB),
+                    color: const Color(0xffE5E7EB),
                     child:const Padding(
                       padding: EdgeInsets.only(right:24 ,left: 24,),
                       child: Row(mainAxisAlignment: MainAxisAlignment.start,
@@ -275,46 +274,46 @@ class ProfileScreen extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Text("Accesibility"),
-                            Spacer(),
-                            IconButton(onPressed: (){}, icon: Icon(Icons.arrow_forward))
+                            const Text("Accesibility"),
+                            const Spacer(),
+                            IconButton(onPressed: (){}, icon: const Icon(Icons.arrow_forward))
                           ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 14,bottom: 14),
+                        const Padding(
+                          padding: EdgeInsets.only(top: 14,bottom: 14),
                           child: Divider(height: 10,color: Colors.grey,thickness: 1,indent: 0),
                         ),
                         Row(
                           children: [
-                            Text("Help Center"),
-                            Spacer(),
-                            IconButton(onPressed: (){}, icon: Icon(Icons.arrow_forward))
+                            const Text("Help Center"),
+                            const Spacer(),
+                            IconButton(onPressed: (){}, icon: const Icon(Icons.arrow_forward))
                           ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 14,bottom: 14),
+                        const Padding(
+                          padding: EdgeInsets.only(top: 14,bottom: 14),
                           child: Divider(height: 10,color: Colors.grey,thickness: 1,indent: 0),
                         ),
                         Row(
                           children: [
-                            Text("Terms & Conditions"),
-                            Spacer(),
-                            IconButton(onPressed: (){}, icon: Icon(Icons.arrow_forward))
+                            const Text("Terms & Conditions"),
+                            const Spacer(),
+                            IconButton(onPressed: (){}, icon: const Icon(Icons.arrow_forward))
                           ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 14,bottom: 14),
+                        const Padding(
+                          padding: EdgeInsets.only(top: 14,bottom: 14),
                           child: Divider(height: 10,color: Colors.grey,thickness: 1,indent: 0),
                         ),
                         Row(
                           children: [
-                            Text("Privacy Policy"),
-                            Spacer(),
-                            IconButton(onPressed: (){}, icon: Icon(Icons.arrow_forward))
+                            const Text("Privacy Policy"),
+                            const Spacer(),
+                            IconButton(onPressed: (){}, icon: const Icon(Icons.arrow_forward))
                           ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 14,bottom: 14),
+                        const Padding(
+                          padding: EdgeInsets.only(top: 14,bottom: 14),
                           child: Divider(height: 10,color: Colors.grey,thickness: 1,indent: 0),
                         ),
 
@@ -334,7 +333,7 @@ class ProfileScreen extends StatelessWidget {
                     Row(
                       children: [
                         IconButton(
-                          icon:  Icon(Icons.arrow_back),
+                          icon:  const Icon(Icons.arrow_back),
                           onPressed: () {
                             Navigator.of(context).pushReplacement(MaterialPageRoute(
                               builder: (context) => HomeNavigationBar(pageNumber: 0),

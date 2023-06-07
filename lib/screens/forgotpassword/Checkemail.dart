@@ -4,6 +4,8 @@ import 'newpassword/newpassword.dart';
 
 
 class CheckEmail extends StatelessWidget {
+  const CheckEmail({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +46,7 @@ class CheckEmail extends StatelessWidget {
                         MaterialPageRoute(builder: (context) =>NewPass() ,));
 
                   },
-                  buttoncolor: Color(0xff3366FF),
+                  buttoncolor: const Color(0xff3366FF),
                   textcolor: Colors.white),
               const SizedBox(
                 height: 40,

@@ -1,14 +1,12 @@
 import 'package:dotted_border/dotted_border.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../CustomItems/CustomButton.dart';
-import '../../CustomItems/Custom_Card/Custom_Card.dart';
 import '../../CustomItems/custom_icons.dart';
 import '../CustomItems/Custom_TypeOfWork.dart';
 import 'Apply Done.dart';
 
 class ApplyJob extends StatefulWidget {
-   ApplyJob({Key? key}) : super(key: key);
+   const ApplyJob({Key? key}) : super(key: key);
 
   @override
   State<ApplyJob> createState() => _ApplyJobState();
@@ -58,18 +56,19 @@ class _ApplyJobState extends State<ApplyJob> {
                 const SizedBox(height: 40,),
                  Row(
                   children: [
-                    Spacer(),
+                    const Spacer(),
                      Column(
                       children: [
                        numPage==0? const CircleAvatar(
+                          radius: 23,
+                          backgroundColor: Colors.blue,
                           child: CircleAvatar(
+                            backgroundColor: Colors.white,
+                            radius: 21.5,
                             child: Center(
                               child: Text("1"),
                             ),
-                            backgroundColor: Colors.white,
-                            radius: 21.5,
-                          ),radius: 23,
-                          backgroundColor: Colors.blue,
+                          ),
                         )
                            :const CircleAvatar(
                          radius: 23,
@@ -90,9 +89,9 @@ class _ApplyJobState extends State<ApplyJob> {
                           backgroundColor:numPage==1?Colors.blue:numPage==2?Colors.blue:Colors.grey ,
                           child: CircleAvatar(
                             backgroundColor: numPage==2?Colors.blue:Colors.white,
-                            child: numPage==2?Icon(Icons.done,color: Colors.white,)
-                            :Center(child: Text("2",style: TextStyle(color: numPage==1?Colors.blue:Colors.grey),)),
                             radius: 21.5,
+                            child: numPage==2?const Icon(Icons.done,color: Colors.white,)
+                            :Center(child: Text("2",style: TextStyle(color: numPage==1?Colors.blue:Colors.grey),)),
                           ),
                         ),
                         const SizedBox(height: 10,),
@@ -110,8 +109,8 @@ class _ApplyJobState extends State<ApplyJob> {
                           backgroundColor: numPage==2?Colors.blue:Colors.grey,
                           child: CircleAvatar(
                             backgroundColor: Colors.white,
-                            child: Center(child: Text("3",style: TextStyle(color: numPage==2?Colors.blue:Colors.grey),)),
                             radius: 21.5,
+                            child: Center(child: Text("3",style: TextStyle(color: numPage==2?Colors.blue:Colors.grey),)),
                           ),
                         ),
                         const SizedBox(height: 10,),
@@ -140,14 +139,14 @@ class _ApplyJobState extends State<ApplyJob> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Bio data",style: TextStyle(
+                              const Text("Bio data",style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w500
                               )),
-                              Text("Fill in your bio data correctly"),
-                              SizedBox(height: 28,),
-                              Text("Full Name*"),
-                              SizedBox(height: 8,),
+                              const Text("Fill in your bio data correctly"),
+                              const SizedBox(height: 28,),
+                              const Text("Full Name*"),
+                              const SizedBox(height: 8,),
                               TextFormField(
                                 validator: (value) {
                                   if (value!.length < 5) {
@@ -165,9 +164,9 @@ class _ApplyJobState extends State<ApplyJob> {
                                       borderRadius: BorderRadius.circular(8),
                                     )),
                               ),
-                              SizedBox(height: 28,),
-                              Text("Email*"),
-                              SizedBox(height: 8,),
+                              const SizedBox(height: 28,),
+                              const Text("Email*"),
+                              const SizedBox(height: 8,),
                               TextFormField(
                                 validator: (value) {
                                   if (value!.length < 5) {
@@ -185,9 +184,9 @@ class _ApplyJobState extends State<ApplyJob> {
                                       borderRadius: BorderRadius.circular(8),
                                     )),
                               ),
-                              SizedBox(height: 28,),
-                              Text("No.Handphone*"),
-                              SizedBox(height: 8,),
+                              const SizedBox(height: 28,),
+                              const Text("No.Handphone*"),
+                              const SizedBox(height: 8,),
                               TextFormField(
 
                                 validator: (value) {
@@ -235,14 +234,14 @@ class _ApplyJobState extends State<ApplyJob> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Upload portfolio",style: TextStyle(
+                            const Text("Upload portfolio",style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w500
                             )),
-                            Text("Fill in your bio data correctly"),
-                            SizedBox(height: 28,),
-                            Text("Upload CV*"),
-                            SizedBox(height: 12,),
+                            const Text("Fill in your bio data correctly"),
+                            const SizedBox(height: 28,),
+                            const Text("Upload CV*"),
+                            const SizedBox(height: 12,),
                             Container(
                               height:74 ,
                               width: MediaQuery.of(context).size.width,
@@ -255,31 +254,31 @@ class _ApplyJobState extends State<ApplyJob> {
                                 child: Row(
                                   children: [
                                     Image.asset("lib/images/file.png"),
-                                    SizedBox(width: 10,),
-                                    Column(children: [
+                                    const SizedBox(width: 10,),
+                                    const Column(children: [
                                       Text("Rafif Dian.CV"),
                                       Text("CV.pdf 300KB"),
                                     ],),
-                                    Spacer(),
-                                    IconButton(onPressed: (){}, icon: Icon(CustomIcons.edit_2,color: Colors.blue,)),
-                                    IconButton(onPressed: (){}, icon: Icon(CustomIcons.close_circle,color: Colors.red,)),
+                                    const Spacer(),
+                                    IconButton(onPressed: (){}, icon: const Icon(CustomIcons.edit_2,color: Colors.blue,)),
+                                    IconButton(onPressed: (){}, icon: const Icon(CustomIcons.close_circle,color: Colors.red,)),
                                   ],
                                 ),
                               ),
                             ),
-                            SizedBox(height: 20,),
-                            Text("Other File"),
-                            SizedBox(height: 12,),
+                            const SizedBox(height: 20,),
+                            const Text("Other File"),
+                            const SizedBox(height: 12,),
                             DottedBorder(
                               color:Colors.blue ,
-                              radius: Radius.circular(8),
+                              radius: const Radius.circular(8),
                               borderType: BorderType.RRect,
-                              dashPattern: [5],
+                              dashPattern: const [5],
                               child: Container(
                                 width:MediaQuery.of(context).size.width ,
                                 height: 221,
                                 decoration: BoxDecoration(
-                                  color: Color(0xffECF2FF),
+                                  color: const Color(0xffECF2FF),
                                   borderRadius: BorderRadius.circular(8)
                                 ),
                                 child: Padding(
@@ -288,24 +287,24 @@ class _ApplyJobState extends State<ApplyJob> {
                                     children: [
                                       CircleAvatar(
                                         radius: 25,
-                                        backgroundColor:Color(0xffD6E4FF) ,
+                                        backgroundColor:const Color(0xffD6E4FF) ,
                                         child: Image.asset("lib/images/Vector.png"),
                                       ),
-                                      Spacer(),
-                                      Text("Upload your other file"),
-                                      Spacer(),
-                                      Text("Max. file size 10 MB"),
-                                      Spacer(),
+                                      const Spacer(),
+                                      const Text("Upload your other file"),
+                                      const Spacer(),
+                                      const Text("Max. file size 10 MB"),
+                                      const Spacer(),
                                       Container(
                                         height: 40,
                                         width: 295,
                                         decoration:BoxDecoration(
-                                          color:Color(0xffD6E4FF),
+                                          color:const Color(0xffD6E4FF),
                                           borderRadius: BorderRadius.circular(100),
                                           border: Border.all(color: Colors.blue)
                                         ) ,
                                         child: TextButton(
-                                            onPressed: (){}, child: Row(
+                                            onPressed: (){}, child: const Row(
                                           mainAxisAlignment: MainAxisAlignment.center,
                                           children: [
                                             Icon(CustomIcons.export_icon),

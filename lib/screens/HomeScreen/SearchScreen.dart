@@ -6,7 +6,7 @@ import '../job_Details.dart';
 import 'HomeNavigationBar.dart';
 
 class SearchScreen extends StatefulWidget {
-   SearchScreen({Key? key}) : super(key: key);
+   const SearchScreen({Key? key}) : super(key: key);
 
   @override
   State<SearchScreen> createState() => _SearchScreenState();
@@ -42,7 +42,7 @@ List filterList=[];
                           onFieldSubmitted: (value) {
                             setState(() {
                               searchHistory.add(value);
-                              print(value);
+
                             });
                           },
                           onChanged: (value){
@@ -58,7 +58,6 @@ List filterList=[];
                                 filterList=mainList.where((element) => element.contains(value),).toList();
                               });
                             }
-                            print(filterList);
                           },
                           controller:_controller ,
                           decoration: const InputDecoration(
@@ -79,7 +78,7 @@ List filterList=[];
                   child: Container(
                     width: MediaQuery.of(context).size.width,
                     height: 36,
-                    color: Color(0xffE5E7EB),
+                    color: const Color(0xffE5E7EB),
                     child:const Padding(
                       padding: EdgeInsets.only(right:24 ,left: 24,),
                       child: Row(mainAxisAlignment: MainAxisAlignment.start,
@@ -111,7 +110,7 @@ List filterList=[];
                                 setState(() {
                                   searchHistory.remove(searchHistory[index]);
                                 });
-                              }, icon: Icon(CustomIcons.close_circle))
+                              }, icon: const Icon(CustomIcons.close_circle))
                             ],),
                           )),
                       separatorBuilder: (context, index) => const Column(
@@ -125,7 +124,7 @@ List filterList=[];
                 Container(
                   width: MediaQuery.of(context).size.width,
                   height: 36,
-                  color: Color(0xffE5E7EB),
+                  color: const Color(0xffE5E7EB),
                   child:const Padding(
                     padding: EdgeInsets.only(right:24 ,left: 24,),
                     child: Row(mainAxisAlignment: MainAxisAlignment.start,
@@ -141,15 +140,15 @@ List filterList=[];
                       itemBuilder: (context, index) => Padding(
                         padding: const EdgeInsets.only(right: 24,left: 24),
                         child: Row(children: [
-                          Icon(CustomIcons.search_status,size: 16,),
-                          SizedBox(width: 10,),
+                          const Icon(CustomIcons.search_status,size: 16,),
+                          const SizedBox(width: 10,),
                           Text(filterList[index]),
-                          Spacer(),
+                          const Spacer(),
                           IconButton(onPressed: (){
-                            int Indexx=mainList.indexOf(filterList[index]);
+                            int indexx=mainList.indexOf(filterList[index]);
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) =>JobDetails(index: Indexx)));
-                          }, icon: Icon(CustomIcons.arrow_right,color: Colors.blue,))
+                                builder: (context) =>JobDetails(index: indexx)));
+                          }, icon: const Icon(CustomIcons.arrow_right,color: Colors.blue,))
                         ],),
                       ),
                       separatorBuilder: (context, index) => const Column(

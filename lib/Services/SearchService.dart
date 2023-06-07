@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../CustomItems/Custom_job.dart';
@@ -6,6 +5,7 @@ import '../CustomItems/custom_icons.dart';
 import '../controller/data_cubit.dart';
 import '../screens/job_Details.dart';
 
+// ignore: camel_case_types
 class search extends SearchDelegate{
   
   @override
@@ -45,16 +45,17 @@ class search extends SearchDelegate{
       child: ListView.builder(
           itemBuilder: (context, index) => query==""?
           Row(children: [
-            Icon(Icons.access_alarm),
+            const Icon(Icons.access_alarm),
             Text(mainList[index]),
-            Spacer(),
-            IconButton(icon: Icon(CustomIcons.arrow_right),onPressed: (){
+            const Spacer(),
+            IconButton(icon: const Icon(CustomIcons.arrow_right),onPressed: (){
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => JobDetails(index: index),));
             },)
           ],)
               :InkWell(
               onTap: (){
+               // ignore: non_constant_identifier_names
                int Index=mainList.indexOf(filter[index]);
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => JobDetails(index: Index),));

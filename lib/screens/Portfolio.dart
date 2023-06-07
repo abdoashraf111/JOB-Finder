@@ -38,19 +38,19 @@ class Portfolio extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 36,),
-                      Text("Add portfolio here"),
-                      SizedBox(height: 16,),
+                      const SizedBox(height: 36,),
+                      const Text("Add portfolio here"),
+                      const SizedBox(height: 16,),
                       DottedBorder(
                         color:Colors.blue ,
-                        radius: Radius.circular(8),
+                        radius: const Radius.circular(8),
                         borderType: BorderType.RRect,
-                        dashPattern: [5],
+                        dashPattern: const [5],
                         child: Container(
                           width:MediaQuery.of(context).size.width ,
                           height: 221,
                           decoration: BoxDecoration(
-                              color: Color(0xffECF2FF),
+                              color: const Color(0xffECF2FF),
                               borderRadius: BorderRadius.circular(8)
                           ),
                           child: Padding(
@@ -59,24 +59,24 @@ class Portfolio extends StatelessWidget {
                               children: [
                                 CircleAvatar(
                                   radius: 25,
-                                  backgroundColor:Color(0xffD6E4FF) ,
+                                  backgroundColor:const Color(0xffD6E4FF) ,
                                   child: Image.asset("lib/images/Vector.png"),
                                 ),
-                                Spacer(),
-                                Text("Upload your other file"),
-                                Spacer(),
-                                Text("Max. file size 10 MB"),
-                                Spacer(),
+                                const Spacer(),
+                                const Text("Upload your other file"),
+                                const Spacer(),
+                                const Text("Max. file size 10 MB"),
+                                const Spacer(),
                                 Container(
                                   height: 40,
                                   width: 295,
                                   decoration:BoxDecoration(
-                                      color:Color(0xffD6E4FF),
+                                      color:const Color(0xffD6E4FF),
                                       borderRadius: BorderRadius.circular(100),
                                       border: Border.all(color: Colors.blue)
                                   ) ,
                                   child: TextButton(
-                                      onPressed: (){}, child: Row(
+                                      onPressed: (){}, child: const Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(CustomIcons.export_icon),
@@ -89,7 +89,7 @@ class Portfolio extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 36,),
+                      const SizedBox(height: 36,),
                       Container(
                         height:74 ,
                         width: MediaQuery.of(context).size.width,
@@ -102,14 +102,14 @@ class Portfolio extends StatelessWidget {
                           child: Row(
                             children: [
                               Image.asset("lib/images/file.png"),
-                              SizedBox(width: 10,),
-                              Column(children: [
+                              const SizedBox(width: 10,),
+                              const Column(children: [
                                 Text("Rafif Dian.CV"),
                                 Text("CV.pdf 300KB"),
                               ],),
-                              Spacer(),
-                              IconButton(onPressed: (){}, icon: Icon(CustomIcons.edit_2,color: Colors.blue,)),
-                              IconButton(onPressed: (){}, icon: Icon(CustomIcons.close_circle,color: Colors.red,)),
+                              const Spacer(),
+                              IconButton(onPressed: (){}, icon: const Icon(CustomIcons.edit_2,color: Colors.blue,)),
+                              IconButton(onPressed: (){}, icon: const Icon(CustomIcons.close_circle,color: Colors.red,)),
                             ],
                           ),
                         ),

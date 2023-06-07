@@ -48,7 +48,7 @@ class PassDone extends StatelessWidget {
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) =>HomeNavigationBar(pageNumber: 0) ,));
                   },
-                  buttoncolor: Color(0xff3366FF),
+                  buttoncolor: const Color(0xff3366FF),
                   textcolor: Colors.white),
               const SizedBox(
                 height: 40,

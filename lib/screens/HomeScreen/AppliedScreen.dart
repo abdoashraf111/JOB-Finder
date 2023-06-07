@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:joobfinder/screens/HomeScreen/HomeNavigationBar.dart';
 
 class AppliedScreen extends StatefulWidget {
-  AppliedScreen({Key? key}) : super(key: key);
+  const AppliedScreen({Key? key}) : super(key: key);
 
   @override
   State<AppliedScreen> createState() => _AppliedScreenState();
@@ -119,9 +119,9 @@ class _AppliedScreenState extends State<AppliedScreen> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                       Image.asset("lib/images/no applyed.png"),
-                      Text("No applications were rejected",style: TextStyle(fontSize: 24,fontWeight: FontWeight.w500)),
-                      SizedBox(height: 20,),
-                          SizedBox(
+                      const Text("No applications were rejected",style: TextStyle(fontSize: 24,fontWeight: FontWeight.w500)),
+                      const SizedBox(height: 20,),
+                          const SizedBox(
                               width: 324,
                               child: Column(
                                 children: [

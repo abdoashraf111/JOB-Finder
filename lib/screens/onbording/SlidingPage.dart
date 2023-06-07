@@ -23,26 +23,26 @@ class SlidingPage extends StatelessWidget {
                 onPageChanged: (value) {
                    BlocProvider.of<OnbordingCubit>(context).changePage(value: value);
                 },
-                children: [
+                children: const [
                   Pageviews(
                       text1: "Find a job, and ",
                       text2: "start building ",
                       text3: "your career from now on",
-                      smalltext:
+                      smallText:
                           "Explore over 25,924 available job roles and upgrade your operator now.",
                       image: "lib/images/Background.png"),
                   Pageviews(
                       text1: "Hundreds of jobs are waiting for you to ",
                       text2: "join together",
                       text3: "",
-                      smalltext:
+                      smallText:
                           "Immediately join us and start applying for the job you are interested in.",
                       image: "lib/images/Background 2.png"),
                   Pageviews(
                       text1: "Get the best ",
                       text2: "choice for the job ",
                       text3: "you've always dreamed of",
-                      smalltext:
+                      smallText:
                           "The better the skills you have, the greater the good job opportunities for you.",
                       image: "lib/images/Background 3.png"),
                 ],

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class NotificationScreen extends StatefulWidget {
-  NotificationScreen({Key? key}) : super(key: key);
+  const NotificationScreen({Key? key}) : super(key: key);
 
   @override
   State<NotificationScreen> createState() => _NotificationScreenState();
@@ -72,7 +72,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               Container(
         width: MediaQuery.of(context).size.width,
         height: 36,
-        color: Color(0xffE5E7EB),
+        color: const Color(0xffE5E7EB),
         child: const Padding(
           padding: EdgeInsets.only(
             right: 24,
@@ -86,7 +86,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
           ),
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 20,
       ),
       Padding(
@@ -97,7 +97,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               itemBuilder: (context, index) => Row(
                     children: [
                       Text(name[index]),
-                      Spacer(),
+                      const Spacer(),
                       CupertinoSwitch(
                           activeColor: Colors.blue,
                           value: butt[index],
@@ -108,9 +108,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
                           })
                     ],
                   ),
-              separatorBuilder: (context, index) => Column(
+              separatorBuilder: (context, index) => const Column(
                     children: [
-                      const Divider(
+                      Divider(
                         height: 20,
                         color: Colors.grey,
                       ),
@@ -122,13 +122,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
               itemCount: 5),
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 20,
       ),
       Container(
         width: MediaQuery.of(context).size.width,
         height: 36,
-        color: Color(0xffE5E7EB),
+        color: const Color(0xffE5E7EB),
         child: const Padding(
           padding: EdgeInsets.only(
             right: 24,
@@ -142,7 +142,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
           ),
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 20,
       ),
       Padding(
@@ -153,7 +153,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               itemBuilder: (context, index) => Row(
                     children: [
                       Text(otherName[index]),
-                      Spacer(),
+                      const Spacer(),
                       CupertinoSwitch(
                           activeColor: Colors.blue,
                           value: otherButt[index],

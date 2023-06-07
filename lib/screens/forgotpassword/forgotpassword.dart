@@ -1,16 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-
 import '../../CustomItems/CustomButton.dart';
 import '../Signin/Signin.dart';
 import 'Checkemail.dart';
 
 class ForgotPassword extends StatelessWidget {
   ForgotPassword({Key? key}) : super(key: key);
-  var emailcontroller = TextEditingController();
-  GlobalKey<FormState> FormKey = GlobalKey<FormState>();
+  final emailcontroller = TextEditingController();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +44,7 @@ class ForgotPassword extends StatelessWidget {
                 height: 40,
               ),
               Form(
-                key: FormKey,
+                key: formKey,
                 child: TextFormField(
                   validator: (value) {
                     if (value == "") {
@@ -90,9 +86,9 @@ class ForgotPassword extends StatelessWidget {
               CustomButton(
                   text: "Request password reset",
                   fun: () async{
-                    if(FormKey.currentState!.validate()){
+                    if(formKey.currentState!.validate()){
                       Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) =>CheckEmail() ,));
+                          MaterialPageRoute(builder: (context) =>const CheckEmail() ,));
                     }
                     // await BlocProvider.of<DataCubit>(context).sendEmail(email: emailcontroller.text);
 

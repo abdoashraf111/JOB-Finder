@@ -4,16 +4,18 @@ import 'package:flutter/material.dart';
 import '../../../CustomItems/CustomButton.dart';
 import '../HomeScreen/ProfileScreen.dart';
 
+// ignore: camel_case_types
 class phoneNumber extends StatefulWidget {
-   phoneNumber({Key? key}) : super(key: key);
+   const phoneNumber({Key? key}) : super(key: key);
   @override
   State<phoneNumber> createState() => _phoneNumberState();
 }
 
+// ignore: camel_case_types
 class _phoneNumberState extends State<phoneNumber> {
-  var phonecontroller = TextEditingController();
+  var phoneController = TextEditingController();
   bool valuee=false;
-   GlobalKey<FormState> FormKey = GlobalKey<FormState>();
+   GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class _phoneNumberState extends State<phoneNumber> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 30,),
+              const SizedBox(height: 30,),
               Row(
                 children: [
                   IconButton(
@@ -32,9 +34,9 @@ class _phoneNumberState extends State<phoneNumber> {
                         Navigator.of(context).pop();
                       },
                       icon: const Icon(Icons.arrow_back)),
-                  Spacer(flex: 3,),
-                  Text("Phone number",style: TextStyle(fontSize: 20)),
-                  Spacer(flex: 4,),
+                  const Spacer(flex: 3,),
+                  const Text("Phone number",style: TextStyle(fontSize: 20)),
+                  const Spacer(flex: 4,),
                 ],
               ),
               const SizedBox(
@@ -45,7 +47,7 @@ class _phoneNumberState extends State<phoneNumber> {
                 height: 8,
               ),
               Form(
-                key: FormKey,
+                key: formKey,
                 child: TextFormField(
                   validator: (value) {
                     if (value == "") {
@@ -54,7 +56,7 @@ class _phoneNumberState extends State<phoneNumber> {
                       return null;
                     }
                   },
-                  controller: phonecontroller,
+                  controller: phoneController,
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.flag),
@@ -64,11 +66,11 @@ class _phoneNumberState extends State<phoneNumber> {
                       )),
                 ),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Row(
                 children: [
-                  Text("Use the phone number to reset your \n password"),
-                  Spacer(),
+                  const Text("Use the phone number to reset your \n password"),
+                  const Spacer(),
                   CupertinoSwitch(
                       activeColor: Colors.blue,
                       value:valuee ,
@@ -89,7 +91,7 @@ class _phoneNumberState extends State<phoneNumber> {
               CustomButton(
                   text: "Save",
                   fun: () async{
-                    if(FormKey.currentState!.validate()){
+                    if(formKey.currentState!.validate()){
                       Navigator.of(context).push(
                           MaterialPageRoute(builder: (context) =>ProfileScreen() ,));
                     }

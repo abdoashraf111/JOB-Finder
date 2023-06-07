@@ -2,23 +2,23 @@
 import 'package:flutter/material.dart';
 
 class Pageviews extends StatelessWidget {
-  Pageviews({Key? key,
+  const Pageviews({Key? key,
     required this.image,
     required this.text1,
     required this.text2,
     required this.text3,
-    required this.smalltext}) : super(key: key);
-  String image;
-  String text1;
-  String text2;
-  String text3;
-  String smalltext;
+    required this.smallText}) : super(key: key);
+  final String image;
+  final String text1;
+  final String text2;
+  final String text3;
+  final String smallText;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Image.asset(image),
-        SizedBox(height: 24,),
+        const SizedBox(height: 24,),
         Padding(
           padding: const EdgeInsets.only(left: 24,right: 24),
           child: Column(
@@ -27,7 +27,7 @@ class Pageviews extends StatelessWidget {
                 maxLines:3,
                 textAlign: TextAlign.start,
                 text:  TextSpan(
-                    text: text1,style: TextStyle(
+                    text: text1,style: const TextStyle(
                     color: Colors.black,
                     fontSize: 32,
                     fontFamily: "lib/fonts/SFPRODISPLAYBLACKITALIC.OTF"
@@ -35,17 +35,17 @@ class Pageviews extends StatelessWidget {
                     children: [
                       TextSpan(
                         text: text2,
-                        style: TextStyle(color: Colors.blue),
+                        style: const TextStyle(color: Colors.blue),
                       ),
                       TextSpan(
                           text: text3,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.black
                           ))]
                 ),
               ),
-              SizedBox(height: 12,),
-              Text(smalltext,style: TextStyle(
+              const SizedBox(height: 12,),
+              Text(smallText,style: const TextStyle(
                   fontSize: 16,
                   color: Colors.grey
               ),)

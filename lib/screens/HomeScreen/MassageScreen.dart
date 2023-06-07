@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../CustomItems/custom_icons.dart';
@@ -7,7 +6,7 @@ import 'HomeNavigationBar.dart';
 class MassageScreen extends StatelessWidget {
    MassageScreen({Key? key}) : super(key: key);
 
-  List images=[
+  final List images=[
     "lib/images/chat/Dana Logo.png",
     "lib/images/chat/Facebook Logo.png",
     "lib/images/chat/Gojek Logo.png",
@@ -15,7 +14,7 @@ class MassageScreen extends StatelessWidget {
     "lib/images/chat/Slack Logo.png",
     "lib/images/chat/Twitter Logo.png",
   ];
-  List tests=[
+  final List tests=[
     "Twitter",
     "Gojek Indonesia",
     "Shoope",
@@ -105,7 +104,7 @@ class MassageScreen extends StatelessWidget {
                                       width: MediaQuery.of(context).size.width,
                                       decoration: BoxDecoration(
                                           color: Colors.white,
-                                          borderRadius: BorderRadius.only(topLeft: Radius.circular(50),topRight: Radius.circular(50)),
+                                          borderRadius: const BorderRadius.only(topLeft: Radius.circular(50),topRight: Radius.circular(50)),
                                           border: Border.all(color: Colors.grey)
                                       ),
                                       child: Padding(
@@ -191,22 +190,22 @@ class MassageScreen extends StatelessWidget {
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Text(tests[index],style: TextStyle(
+                                      Text(tests[index],style: const TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500
                                       )),
-                                   Spacer(),
-                                      Text("Thank You David!")
+                                   const Spacer(),
+                                      const Text("Thank You David!")
                                     ],
                                   ),
-                                  Spacer(),
-                                  Text("12.39"),
+                                  const Spacer(),
+                                  const Text("12.39"),
                                 ],
                               ),
                           ),
                         ),
                             ),
-                        separatorBuilder: (context, index) => Divider(height: 10,color: Colors.grey),
+                        separatorBuilder: (context, index) => const Divider(height: 10,color: Colors.grey),
                         itemCount: 6),
                   )
 

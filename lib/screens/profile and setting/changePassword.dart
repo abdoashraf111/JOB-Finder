@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../CustomItems/CustomButton.dart';
@@ -6,8 +5,8 @@ import '../HomeScreen/ProfileScreen.dart';
 
 class changePassword extends StatelessWidget {
    changePassword({Key? key}) : super(key: key);
-  var phonecontroller = TextEditingController();
-  GlobalKey<FormState> FormKey = GlobalKey<FormState>();
+  final  phoneController = TextEditingController();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +15,11 @@ class changePassword extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(left: 24, right: 24),
           child: Form(
-            key: FormKey,
+            key: formKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
                 Row(
                   children: [
                     IconButton(
@@ -28,9 +27,9 @@ class changePassword extends StatelessWidget {
                           Navigator.of(context).pop();
                         },
                         icon: const Icon(Icons.arrow_back)),
-                    Spacer(flex: 3,),
-                    Text("Change password",style: TextStyle(fontSize: 20)),
-                    Spacer(flex: 4,),
+                    const Spacer(flex: 3,),
+                    const Text("Change password",style: TextStyle(fontSize: 20)),
+                    const Spacer(flex: 4,),
                   ],
                 ),
                 const SizedBox(
@@ -48,7 +47,7 @@ class changePassword extends StatelessWidget {
                       return null;
                     }
                   },
-                  controller: phonecontroller,
+                  controller: phoneController,
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.flag),
@@ -70,7 +69,7 @@ class changePassword extends StatelessWidget {
                       return null;
                     }
                   },
-                  controller: phonecontroller,
+                  controller: phoneController,
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.flag),
@@ -92,7 +91,7 @@ class changePassword extends StatelessWidget {
                       return null;
                     }
                   },
-                  controller: phonecontroller,
+                  controller: phoneController,
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.flag),
@@ -108,7 +107,7 @@ class changePassword extends StatelessWidget {
                 CustomButton(
                     text: "Save",
                     fun: () async{
-                      if(FormKey.currentState!.validate()){
+                      if(formKey.currentState!.validate()){
                         Navigator.of(context).push(
                             MaterialPageRoute(builder: (context) =>ProfileScreen() ,));
                       }

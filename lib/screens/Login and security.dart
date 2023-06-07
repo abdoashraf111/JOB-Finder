@@ -8,26 +8,26 @@ import 'package:joobfinder/screens/profile%20and%20setting/phoneNumber.dart';
 class LoginAndSecurity extends StatelessWidget {
    LoginAndSecurity({Key? key}) : super(key: key);
 
-  List<String> name=[
+ final  List<String> name=[
     "Email address",
     "Phone number",
     "Change password",
     "Two-step verification",
     "Face ID",
   ];
-  List<String> secName=[
+ final List<String> secName=[
     "rafifdian12@gmail.com",
     "",
     "",
     "Non active",
     "",
   ];
-  List screens=[
+ final List screens=[
      emailAddress(),
-     phoneNumber(),
+     const phoneNumber(),
      changePassword(),
-     TwoStepVerification(),
-     faceID(),
+     const TwoStepVerification(),
+     const faceID(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -66,7 +66,7 @@ class LoginAndSecurity extends StatelessWidget {
                    Container(
         width: MediaQuery.of(context).size.width,
         height: 36,
-        color: Color(0xffE5E7EB),
+        color: const Color(0xffE5E7EB),
         child: const Padding(
           padding: EdgeInsets.only(
             right: 24,
@@ -91,14 +91,14 @@ class LoginAndSecurity extends StatelessWidget {
                           itemBuilder: (context, index) => Row(
                             children: [
                               Text(name[index]),
-                              Spacer(),
+                              const Spacer(),
                               Text(secName[index]),
-                              Spacer(),
+                              const Spacer(),
                               IconButton(onPressed: (){
                                 Navigator.of(context).push(MaterialPageRoute(
                                     builder: (context) =>
                                         screens[index]));
-                              }, icon: Icon(Icons.arrow_forward))
+                              }, icon: const Icon(Icons.arrow_forward))
 
                             ],
                           ),

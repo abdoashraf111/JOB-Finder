@@ -13,9 +13,6 @@ void main() async{
   runApp(const MyApp());
   WidgetsFlutterBinding.ensureInitialized();
   await MyCache.init();
-  // Timer(const Duration(seconds: 3), () {
-  //   Get.offAll(() => SlidingPage());
-  // });
 
 }
 
@@ -34,7 +31,7 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (context) => DataCubit()..showFavorites(),),
 
         ],
-        child: MaterialApp(
+        child: const MaterialApp(
         debugShowCheckedModeBanner: false,
         home:
         // SlidingPage(),

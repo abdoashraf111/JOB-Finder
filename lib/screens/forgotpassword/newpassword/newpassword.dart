@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../CustomItems/CustomButton.dart';
@@ -8,9 +7,12 @@ import '../passChangeDone.dart';
 import 'new_pass_word_cubit.dart';
 
 class NewPass extends StatelessWidget {
-  var passwordcontroller1 = TextEditingController();
-  var passwordcontroller2 = TextEditingController();
-  GlobalKey<FormState> FormKey = GlobalKey<FormState>();
+  NewPass({super.key});
+   final  passwordcontroller1 = TextEditingController();
+  final  passwordcontroller2 = TextEditingController();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class NewPass extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(left: 24, right: 24),
             child: Form(
-              key: FormKey,
+              key: formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -130,9 +132,9 @@ class NewPass extends StatelessWidget {
                   CustomButton(
                       text: "Reset password",
                       fun: () {
-                        if(FormKey.currentState!.validate()){
+                        if(formKey.currentState!.validate()){
                           Navigator.of(context).push(
-                              MaterialPageRoute(builder: (context) =>PassDone() ,));
+                              MaterialPageRoute(builder: (context) =>const PassDone() ,));
                         }
                       },
                       buttoncolor: const Color(0xff3366FF),

@@ -10,7 +10,7 @@ import 'HomeScreen/HomeScreen.dart';
 
 class JobDetails extends StatelessWidget {
   JobDetails({Key? key, required this.index}) : super(key: key);
-  int index;
+  final int index;
 
   final _controller = PageController();
 
@@ -38,7 +38,7 @@ class JobDetails extends StatelessWidget {
                             icon: const Icon(Icons.arrow_back),
                             onPressed: () {
                               Navigator.of(context).pop(MaterialPageRoute(
-                                builder: (context) => HomeScreen(),
+                                builder: (context) => const HomeScreen(),
                               ));
                             },
                           ),
@@ -229,7 +229,7 @@ class JobDetails extends StatelessWidget {
                                   height: 8,
                                 ),
                                 Text(job.jobDescription.toString(),
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400)),
                                 const SizedBox(
@@ -243,7 +243,7 @@ class JobDetails extends StatelessWidget {
                                   height: 8,
                                 ),
                                 Text(job.jobSkill.toString(),
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400)),
                               ],
@@ -268,7 +268,7 @@ class JobDetails extends StatelessWidget {
                                         border: Border.all(color: Colors.grey),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsets.all(10),
+                                        padding: const EdgeInsets.all(10),
                                         child: Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
@@ -278,7 +278,7 @@ class JobDetails extends StatelessWidget {
                                                     fontSize: 12,
                                                     color: Colors.grey)),
                                             Text(job.compEmail.toString(),
-                                                style: TextStyle(fontSize: 14)),
+                                                style: const TextStyle(fontSize: 14)),
                                           ],
                                         ),
                                       ),
@@ -297,12 +297,12 @@ class JobDetails extends StatelessWidget {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
-                                            Text("Website",
+                                            const Text("Website",
                                                 style: TextStyle(
                                                     fontSize: 12,
                                                     color: Colors.grey)),
                                             Text(job.compWebsite.toString(),
-                                                style: TextStyle(fontSize: 14)),
+                                                style: const TextStyle(fontSize: 14)),
                                           ],
                                         ),
                                       ),
@@ -320,7 +320,7 @@ class JobDetails extends StatelessWidget {
                                   height: 16,
                                 ),
                                 Text(job.aboutComp.toString(),
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400)),
                               ],
@@ -336,7 +336,7 @@ class JobDetails extends StatelessWidget {
                                                 fontSize: 14,
                                                 fontWeight: FontWeight.w500)),
                                         Text(job.jobType.toString(),
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                                 fontSize: 12,
                                                 fontWeight: FontWeight.w400,
                                                 color: Colors.grey)),
@@ -405,7 +405,7 @@ class JobDetails extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => ApplyJob(),
+                                builder: (context) => const ApplyJob(),
                               ));
                         },
                         buttoncolor: Colors.blue,

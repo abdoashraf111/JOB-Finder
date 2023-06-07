@@ -220,7 +220,6 @@ class SignIn extends StatelessWidget {
                                await BlocProvider.of<DataCubit>(context).postSignIn(
                                   password: passwordController.text, email: emailController.text);
                             var data=BlocProvider.of<DataCubit>(context).modelSign;
-                           print(data.status);
                               if (data.status == true) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(
@@ -238,7 +237,7 @@ class SignIn extends StatelessWidget {
                               }
 
                             } else {
-                              print("validation is wrong");
+
                             }
                             // await Signup();
                           },
@@ -282,7 +281,7 @@ class SignIn extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Spacer(flex: 1,),
+                          const Spacer(flex: 1,),
                           InkWell(
                             onTap: () {},
                             child: Container(

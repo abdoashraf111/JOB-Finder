@@ -1,14 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../../CustomItems/CustomButton.dart';
 import '../HomeScreen/ProfileScreen.dart';
-import '../forgotpassword/Checkemail.dart';
 
+
+// ignore: camel_case_types
 class emailAddress extends StatelessWidget {
    emailAddress({Key? key}) : super(key: key);
-  var emailcontroller = TextEditingController();
-  GlobalKey<FormState> FormKey = GlobalKey<FormState>();
+  final  emailcontroller = TextEditingController();
+ final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +17,7 @@ class emailAddress extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 30,),
+              const SizedBox(height: 30,),
               Row(
                 children: [
                   IconButton(
@@ -26,9 +25,9 @@ class emailAddress extends StatelessWidget {
                         Navigator.of(context).pop();
                       },
                       icon: const Icon(Icons.arrow_back)),
-                  Spacer(flex: 3,),
-                  Text("Email address",style: TextStyle(fontSize: 20)),
-                  Spacer(flex: 4,),
+                  const Spacer(flex: 3,),
+                  const Text("Email address",style: TextStyle(fontSize: 20)),
+                  const Spacer(flex: 4,),
                 ],
               ),
               const SizedBox(
@@ -39,7 +38,7 @@ class emailAddress extends StatelessWidget {
                 height: 8,
               ),
               Form(
-                key: FormKey,
+                key: formKey,
                 child: TextFormField(
                   validator: (value) {
                     if (value == "") {
@@ -66,7 +65,7 @@ class emailAddress extends StatelessWidget {
               CustomButton(
                   text: "Save",
                   fun: () async{
-                    if(FormKey.currentState!.validate()){
+                    if(formKey.currentState!.validate()){
                       Navigator.of(context).push(
                           MaterialPageRoute(builder: (context) =>ProfileScreen() ,));
                     }

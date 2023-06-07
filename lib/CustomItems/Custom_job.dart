@@ -5,8 +5,8 @@ import 'custom_icons.dart';
 
 
 class CustomJob extends StatefulWidget {
-   CustomJob({Key? key, required this.index}) : super(key: key);
-   int index;
+   const CustomJob({Key? key, required this.index}) : super(key: key);
+   final int index;
 
   @override
   State<CustomJob> createState() => _CustomJobState();

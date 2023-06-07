@@ -8,7 +8,7 @@ class EditeProfile extends StatelessWidget {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
-  GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,16 +33,16 @@ class EditeProfile extends StatelessWidget {
                                 Navigator.of(context).pop();
                               },
                             ),
-                            Spacer(
+                            const Spacer(
                               flex: 3,
                             ),
-                            Text("Edite Profile"),
-                            Spacer(
+                            const Text("Edite Profile"),
+                            const Spacer(
                               flex: 4,
                             ),
                           ],
                         ),
-                        Center(
+                        const Center(
                           child: CircleAvatar(
                             radius: 45,
                             backgroundColor: Colors.black,
@@ -50,10 +50,10 @@ class EditeProfile extends StatelessWidget {
                             child: Icon(CustomIcons.camera),
                           ),
                         ),
-                        Center(child: TextButton(onPressed: (){}, child: Text("Change  Photo"))),
-                        SizedBox(height: 25,),
-                        Text("Name"),
-                        SizedBox(height: 8,),
+                        Center(child: TextButton(onPressed: (){}, child: const Text("Change  Photo"))),
+                        const SizedBox(height: 25,),
+                        const Text("Name"),
+                        const SizedBox(height: 8,),
                         TextFormField(
                           validator: (value) {
                             if (value!.length < 5) {
@@ -71,9 +71,9 @@ class EditeProfile extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(8),
                               )),
                         ),
-                        SizedBox(height: 28,),
-                        Text("Bio"),
-                        SizedBox(height: 8,),
+                        const SizedBox(height: 28,),
+                        const Text("Bio"),
+                        const SizedBox(height: 8,),
                         TextFormField(
                           validator: (value) {
                             if (value!.length < 5) {
@@ -91,9 +91,9 @@ class EditeProfile extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(8),
                               )),
                         ),
-                        SizedBox(height: 28,),
-                        Text("Address"),
-                        SizedBox(height: 8,),
+                        const SizedBox(height: 28,),
+                        const Text("Address"),
+                        const SizedBox(height: 8,),
                         TextFormField(
                           validator: (value) {
                             if (value!.length < 5) {
@@ -111,9 +111,9 @@ class EditeProfile extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(8),
                               )),
                         ),
-                        SizedBox(height: 28,),
-                        Text("No.Handphone*"),
-                        SizedBox(height: 8,),
+                        const SizedBox(height: 28,),
+                        const Text("No.Handphone*"),
+                        const SizedBox(height: 8,),
                         TextFormField(
 
                           validator: (value) {
@@ -132,12 +132,12 @@ class EditeProfile extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(8),
                               )),
                         ),
-                        SizedBox(height: 83,),
+                        const SizedBox(height: 83,),
                         CustomButton(
                             text: "Save",
                             fun: (){ Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => HomeNavigationBar(pageNumber: 0,)));},
-                            buttoncolor: Color(0xff3366FF),
+                            buttoncolor: const Color(0xff3366FF),
                             textcolor: Colors.white)
                       ]),
                 )
