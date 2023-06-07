@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (context) =>OnbordingCubit() ,),
           BlocProvider(create:(context) => NewPassWordCubit(),),
           BlocProvider(create:(context) => CustomCardCubit(),),
-          BlocProvider(create: (context) => DataCubit()..showFavorites(),),
+          BlocProvider(create: (context) => DataCubit()..getJob()..showFavorites(),),
 
         ],
         child: const MaterialApp(

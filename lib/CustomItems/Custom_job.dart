@@ -23,7 +23,6 @@ class _CustomJobState extends State<CustomJob> {
       var jobId=modelJob.data![widget.index].id;
       List likes=BlocProvider.of<DataCubit>(context).likes;
 
-
       return Column(
         children: [
           SizedBox(
@@ -64,7 +63,7 @@ class _CustomJobState extends State<CustomJob> {
 
                           }
                           else if (likes[widget.index]==true){
-                            await BlocProvider.of<DataCubit>(context).showFavorites();
+                             BlocProvider.of<DataCubit>(context).showFavorites();
                           var x=BlocProvider.of<DataCubit>(context).getIdToDelete( index: widget.index);
                             await BlocProvider.of<DataCubit>(context).deleteFavorites(jobId:x!.toInt() );
 

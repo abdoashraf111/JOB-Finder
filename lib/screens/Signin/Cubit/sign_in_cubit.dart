@@ -53,8 +53,5 @@ class SignInCubit extends Cubit<SignInState> {
         key: MyChachKey.email,
         value: email);
   }
-  // sharePref(){
-  //   checkBox = MyCache.GetBool(key: MyChachKey.checked)!;
-  // }
 
 }

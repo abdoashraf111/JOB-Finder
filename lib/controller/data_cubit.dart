@@ -144,7 +144,7 @@ class DataCubit extends Cubit<DataState> {
     emit(Likes());
   }
   //////////////////////////////////testlikes/////////////////////////////////////
-  showlIkes(){
+   showlIkes(){
     for(int i=0;i<nameList.length;i++){
       for(int j=0;j<showFavModel.data!.length;j++){
         if(showFavModel.data![j].name==nameList[i]){

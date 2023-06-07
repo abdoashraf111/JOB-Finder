@@ -242,7 +242,7 @@ class _CreateAccountState extends State<CreateAccount> {
                           MyCache.SetString(
                               key: MyChachKey.email,
                               value: emailcontroller.text);
-                         await BlocProvider.of<DataCubit>(context).postRegister(
+                          BlocProvider.of<DataCubit>(context).postRegister(
                            name: namecontroller.text,
                               email: emailcontroller.text,
                               password: passwordcontroller.text,);

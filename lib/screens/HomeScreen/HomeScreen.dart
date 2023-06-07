@@ -59,7 +59,7 @@ class HomeScreen extends StatelessWidget {
                     onTap: () {
                       // showSearch(context: context, delegate: search());
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => SearchScreen(),
+                        builder: (context) => const SearchScreen(),
                       ));
                     },
                     child: Container(
@@ -146,20 +146,32 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 BlocBuilder<DataCubit, DataState>(builder: (context, state) {
-                    return SizedBox(
-                      height: 226,
-                      child: ListView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: 2,
-                        itemBuilder: (context, index) => InkWell(
-                          onTap: () =>
-                              Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => JobDetails(index: index),
-                          )),
-                          child: CustomJob(index: index,),
-                        ),
-                      ),
+                  if(state is DataJobLoading){
+                    return
+                    const Center(
+                      child: CircularProgressIndicator(),
                     );
+                  }
+                  if(state is DataSignLoading ){ return
+                    const Center(
+                      child: CircularProgressIndicator(),
+                    );}
+                  else{
+                    return SizedBox(
+                    height: 226,
+                    child: ListView.builder(
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: 2,
+                      itemBuilder: (context, index) => InkWell(
+                        onTap: () =>
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => JobDetails(index: index),
+                            )),
+                        child: CustomJob(index: index,),
+                      ),
+                    ),
+                  );}
+
 
                 }),
               ]),

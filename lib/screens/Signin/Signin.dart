@@ -185,7 +185,7 @@ class SignIn extends StatelessWidget {
                           TextButton(
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => CreateAccount(),
+                                  builder: (context) => const CreateAccount(),
                                 ));
                               },
                               child: const Text(
@@ -207,39 +207,33 @@ class SignIn extends StatelessWidget {
                                 BlocProvider.of<SignInCubit>(context).saveData(
                                     password: passwordController.text,
                                     name: nameController.text,
-                                   email: emailController.text);
+                                    email: emailController.text);
                               }
                                BlocProvider.of<SignInCubit>(context).trueClickEnable();
-                              // Map<String,dynamic> data= await BlocProvider.of<DataCubit>(context).postAuth(
-                              //     url: "http://164.92.246.77/api/auth/login",
-                              //     body:{
-                              //       "password": passwordcontroller.text,
-                              //       "email": emailcontroller.text,
-                              //     }, ) ;
-                              BlocProvider.of<DataCubit>(context).getJob();
-                               await BlocProvider.of<DataCubit>(context).postSignIn(
-                                  password: passwordController.text, email: emailController.text);
-                            var data=BlocProvider.of<DataCubit>(context).modelSign;
+                               BlocProvider.of<DataCubit>(context).postSignIn(
+                                  password: passwordController.text,
+                                    email: emailController.text);
+                               BlocProvider.of<DataCubit>(context).getJob();
+                            var data=  BlocProvider.of<DataCubit>(context).modelSign;
+
                               if (data.status == true) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(
                                         content:
                                             Text("you Sign in Successfully")));
-                                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                                  builder: (context) => HomeNavigationBar(pageNumber: 0),
-                                ));
+                                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                                    builder: (context) => HomeNavigationBar(pageNumber: 0),
+                                  ));
                                 // BlocProvider.of<DataCubit>(context).getJob();
-                              } else  {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
-                                        content: Text(
-                                            "wrong password or wrong email")));
+                              }
+                              else  {
+                                // ScaffoldMessenger.of(context).showSnackBar(
+                                //     const SnackBar(
+                                //         content: Text(
+                                //             "wrong password or wrong email")));
                               }
 
-                            } else {
-
                             }
-                            // await Signup();
                           },
                           buttoncolor: clickEnable == true
                               ? const Color(0xff3366FF)
