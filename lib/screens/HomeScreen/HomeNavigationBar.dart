@@ -21,9 +21,9 @@ int pageNumber;
 
 class _HomeNavigationBarState extends State<HomeNavigationBar> {
   final List<Widget> pages = [
-     HomeScreen(),
+     const HomeScreen(),
     MassageScreen(),
-    AppliedScreen(),
+    const AppliedScreen(),
     SavedScreen(),
     ProfileScreen(),
   ];
@@ -112,8 +112,8 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
                       });
                     },
                     icon: widget.pageNumber == 4
-                        ? Icon(CustomIcons.profile)
-                        : Icon(CustomIcons.profile)),
+                        ? const Icon(CustomIcons.profile)
+                        : const Icon(CustomIcons.profile)),
               ),
             ]),
       );}
