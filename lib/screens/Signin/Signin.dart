@@ -224,15 +224,7 @@ class SignIn extends StatelessWidget {
                                   Navigator.of(context).pushReplacement(MaterialPageRoute(
                                     builder: (context) => HomeNavigationBar(pageNumber: 0),
                                   ));
-                                // BlocProvider.of<DataCubit>(context).getJob();
                               }
-                              else  {
-                                // ScaffoldMessenger.of(context).showSnackBar(
-                                //     const SnackBar(
-                                //         content: Text(
-                                //             "wrong password or wrong email")));
-                              }
-
                             }
                           },
                           buttoncolor: clickEnable == true
